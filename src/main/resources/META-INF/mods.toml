@@ -1,0 +1,28 @@
+modLoader="javafml" #mandatory
+loaderVersion="[37,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+[[mods]] #mandatory
+modId="status_indicators" #mandatory
+version="${file.jarVersion}" #mandatory
+displayName="Status Indicators" #mandatory
+updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+logoFile="status_indicators.png" #optional
+credits="Thanks to the forge people, my friends, and my ~Honey~" #optional
+authors="fallOut015" #optional
+description='''
+A bite-size mod that let's you know when someone's typing in chat, typing out a command, or pausing the game.
+'''
+[[dependencies.status_indicators]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[37,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.status_indicators]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.17.1,1.18)"
+    ordering="NONE"
+    side="BOTH"
