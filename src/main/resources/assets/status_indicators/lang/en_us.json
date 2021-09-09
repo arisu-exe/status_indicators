@@ -1,0 +1,16 @@
+{
+  "status_indicators.config.title" : "Status Indicators",
+
+  "status_indicators.config.see_when_others_are_paused" : "See When Others Are Paused",
+  "status_indicators.config.show_others_when_paused" : "Show Others When Paused",
+
+  "status_indicators.config.see_when_others_are_chatting" : "See When Others Are Chatting",
+  "status_indicators.config.show_others_when_chatting" : "Show Others When Chatting",
+
+  "status_indicators.config.see_when_others_are_commanding" : "See When Others Are Commanding",
+  "status_indicators.config.show_others_when_commanding" : "Show Others When Commanding",
+
+  "status_indicators.config.tab_menu_status" : "Tab Menu Status",
+  "status_indicators.config.chat_status" : "Chat Status",
+  "status_indicators.config.playerhead_status" : "Playerhead Status"
+}

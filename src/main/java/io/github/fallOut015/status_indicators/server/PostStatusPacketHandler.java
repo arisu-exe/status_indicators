@@ -30,8 +30,11 @@ public class PostStatusPacketHandler extends PacketHandlerStatusIndicators {
     public static void handle(PostStatusPacketHandler msg, Supplier<NetworkEvent.Context> ctx) {
         ctx.get().enqueueWork(() -> {
             if(ctx.get().getDirection() == NetworkDirection.PLAY_TO_CLIENT) {
+                System.out.println("Received status update on client");
                 MainStatusIndicator.updatePlayerStatus(msg.uuid, msg.statusType);
             } else if(ctx.get().getDirection() == NetworkDirection.PLAY_TO_SERVER) {
+                System.out.println("Received status update on server");
+                System.out.println("Sending status update to clients");
                 PacketHandlerStatusIndicators.INSTANCE.sendTo(msg, ctx.get().getNetworkManager(), NetworkDirection.PLAY_TO_CLIENT);
             }
         });

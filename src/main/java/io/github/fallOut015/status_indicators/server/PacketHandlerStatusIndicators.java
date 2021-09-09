@@ -10,10 +10,10 @@ public abstract class PacketHandlerStatusIndicators {
     private static int ids = 0;
     private static final String PROTOCOL_VERSION = "1";
     public static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
-            new ResourceLocation(MainStatusIndicator.MODID, "main"),
-            () -> PROTOCOL_VERSION,
-            PROTOCOL_VERSION::equals,
-            PROTOCOL_VERSION::equals
+        new ResourceLocation(MainStatusIndicator.MODID, "main"),
+        () -> PROTOCOL_VERSION,
+        PROTOCOL_VERSION::equals,
+        PROTOCOL_VERSION::equals
     );
 
     final int id;
@@ -22,7 +22,7 @@ public abstract class PacketHandlerStatusIndicators {
         this.id = id;
     }
 
-    public static int getNewID() {
+    protected static int getNewID() {
         return ids++;
     }
     public static void setup(final FMLCommonSetupEvent event) {
